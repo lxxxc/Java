@@ -1,0 +1,5 @@
+package com.qrcode.zxing;
+
+public class ReadQRCode {
+
+}

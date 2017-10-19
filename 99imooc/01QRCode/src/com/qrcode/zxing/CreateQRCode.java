@@ -20,7 +20,7 @@ public class CreateQRCode {
 	
 	private CreateQRCode() {};	//禁止生成实例
 	
-	public static void writeToPath(String content, String format, Path path, Integer width, Integer height) throws Exception {
+	public static void writeToPath(String content, String format, Path path, Integer width, Integer height) throws IOException {
 		HashMap<EncodeHintType, Object> hints = new HashMap<>();
 		//设置生成二维码参数
 		hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
