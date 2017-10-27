@@ -1,0 +1,22 @@
+package com.qrcode.qrcode;
+
+import com.swetake.util.Qrcode;
+
+public class QRCodeCreater {
+	
+	private QRCodeCreater() {};
+	
+	public static void CreateQRCode(String content){
+		Qrcode x = new Qrcode();
+		x.setQrcodeErrorCorrect('M');	//纠错等级
+		x.setQrcodeEncodeMode('B');		//N：数字，A：a-Z，B：其他字符
+		x.setQrcodeVersion(7);			//版本
+		
+		bufferedimage
+		
+		byte[] d = content.getBytes('gb2312');
+		
+		
+	}
+
+}

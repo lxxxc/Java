@@ -1,0 +1,7 @@
+127.0.0.1 - - [23/Oct/2017:20:46:25 +0800] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [23/Oct/2017:20:46:27 +0800] "GET /01QRCode_jQuery/QRcode.jsp HTTP/1.1" 200 585
+0:0:0:0:0:0:0:1 - - [23/Oct/2017:20:46:27 +0800] "GET /01QRCode_jQuery/js/jquery.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/Oct/2017:20:46:27 +0800] "GET /01QRCode_jQuery/js/jquery.qrcode.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2017:20:47:35 +0800] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [23/Oct/2017:20:47:35 +0800] "GET /01QRCode_jQuery/QRcode.jsp HTTP/1.1" 200 585
+0:0:0:0:0:0:0:1 - - [23/Oct/2017:20:47:56 +0800] "GET /01QRCode_jQuery/QRcode.jsp HTTP/1.1" 200 585

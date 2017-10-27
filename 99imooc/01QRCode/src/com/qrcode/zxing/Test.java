@@ -8,7 +8,7 @@ public class Test {
 	public static void main(String[] args) {
 		int width = 2000;
 		int height = 2000;
-		String content = "Java开发大全";
+		String content = "http://www.baidu.com";
 		String format = "png";
 		String fileName = ".\\testqrcode.png";
 		
@@ -16,14 +16,14 @@ public class Test {
 		//"D:" + File.separator + "My Projects" + File.separator + "Java" + File.separator + "0Project" + File.separator + "99imooc" + File.separator + "01QRCode" + File.separator + "testqrcode.png"
 
 		try {
-			CreateQRCode.writeToPath(content, format, path, width, height);
+			QRCodeCreater.writeToPath(content, format, path, width, height);
 			System.out.println("生成二维码成功！");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			ReadQRCode.readFromFile(fileName);
+			QRCodeReader.readFromFile(fileName);
 			System.out.println("读取二维码成功！");
 		} catch (Exception e) {
 			// TODO: handle exception

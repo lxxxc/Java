@@ -1,0 +1,8 @@
+package com.qrcode.qrcode;
+
+import com.swetake.util.Qrcode;
+
+public class CreateQRCode {
+	private
+
+}

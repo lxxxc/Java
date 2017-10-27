@@ -3,12 +3,16 @@
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="com.google.zxing.MultiFormatReader"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="com.google.zxing.BinaryBitmap"/>
 <fullyQualifiedTypeName name="com.google.zxing.common.HybridBinarizer"/>
 <fullyQualifiedTypeName name="com.google.zxing.client.j2se.BufferedImageLuminanceSource"/>
 <fullyQualifiedTypeName name="com.google.zxing.Result"/>
 <fullyQualifiedTypeName name="com.qrcode.zxing.ReadQRCode"/>
+<fullyQualifiedTypeName name="com.swetake.util.Qrcode"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.image.RenderedImage"/>
+<fullyQualifiedTypeName name="jp.sourceforge.qrcode.data.QRCodeImage"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>
