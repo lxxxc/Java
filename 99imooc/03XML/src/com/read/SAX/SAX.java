@@ -2,6 +2,7 @@ package com.read.SAX;
 
 import javax.xml.parsers.SAXParserFactory;
 
+import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import com.read.Test.Book;
@@ -49,4 +50,13 @@ public class SAX {
 
 	}
 
+	@Test
+	public void testPerformance() throws Exception {
+		String fileName = "books.xml";
+		// 测试DOM的性能:
+		long start = System.currentTimeMillis();
+		parse(fileName);
+		System.out.print("性能测试: ");
+		System.out.println("SAX:" + (System.currentTimeMillis() - start));
+	}
 }

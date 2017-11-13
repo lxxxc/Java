@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -17,13 +18,14 @@ public class DOM {
 	 * 构造器
 	 */
 	public DOM() {
-		
+
 	}
 
 	/**
 	 * 解析XML文件
 	 * 
-	 * @param fileName: 要解析的XML文件名
+	 * @param fileName:
+	 *            要解析的XML文件名
 	 */
 	public void parse(String fileName) {
 		// 创建一个DocumentBuilderFactory的对象
@@ -58,24 +60,25 @@ public class DOM {
 					System.out.println("属性值: " + attribute.getNodeValue());
 				}
 
-//				 //前提：已经知道book节点有且只能有1个id属性
-//				 //将book节点进行强制类型转换，转换成Element类型
-//				 Element book = (Element) bookList.item(i);
-//				 //通过getAttribute("id")方法获取属性值
-//				 String attrValue = book.getAttribute("id");
-//				 System.out.println("id属性的属性值为" + attrValue);
+				// //前提：已经知道book节点有且只能有1个id属性
+				// //将book节点进行强制类型转换，转换成Element类型
+				// Element book = (Element) bookList.item(i);
+				// //通过getAttribute("id")方法获取属性值
+				// String attrValue = book.getAttribute("id");
+				// System.out.println("id属性的属性值为" + attrValue);
 
 				// 解析book节点的子节点
 				NodeList childNodes = book.getChildNodes();
 				System.out.println("第" + (i + 1) + "本书共有" + childNodes.getLength() + "个子节点");
 				// 遍历childNodes获取每个节点的节点名和节点值
 				for (int k = 0; k < childNodes.getLength(); k++) {
-					//区分出text类型的node以及element类型的node
+					// 区分出text类型的node以及element类型的node
 					if (childNodes.item(k).getNodeType() == Node.ELEMENT_NODE) {
 						// 获取了element类型节点的节点名
 						System.out.print("第" + (k + 1) + "个节点的节点名：" + childNodes.item(k).getNodeName());
 						System.out.println("--节点值是：" + childNodes.item(k).getFirstChild().getNodeValue());
-//						System.out.println("--节点值是：" + childNodes.item(k).getTextContent());
+						// System.out.println("--节点值是：" +
+						// childNodes.item(k).getTextContent());
 					}
 				}
 				System.out.println("======================结束遍历第" + (i + 1) + "本书的内容=================");
@@ -85,5 +88,15 @@ public class DOM {
 		} catch (SAXException | IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Test
+	public void testPerformance() throws Exception {
+		String fileName = "books.xml";
+		// 测试DOM的性能:
+		long start = System.currentTimeMillis();
+		parse(fileName);
+		System.out.print("性能测试: ");
+		System.out.println("DOM:" + (System.currentTimeMillis() - start));
 	}
 }

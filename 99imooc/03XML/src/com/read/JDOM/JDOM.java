@@ -13,6 +13,7 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
+import org.junit.Test;
 
 import com.read.Test.Book;
 
@@ -104,5 +105,15 @@ public class JDOM {
 			e.printStackTrace();
 		}
 
+	}
+	
+	@Test
+	public void testPerformance() throws Exception {
+		String fileName = "books.xml";
+		// 测试DOM的性能:
+		long start = System.currentTimeMillis();
+		parse(fileName);
+		System.out.print("性能测试: ");
+		System.out.println("JDOM:" + (System.currentTimeMillis() - start));
 	}
 }
